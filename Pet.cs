@@ -32,6 +32,8 @@ namespace TamagotchiApp
         /// </summary>
         private int PetFatigue{ get; set;} = 0;
 
+        private int PetHappiness { get; set; } = 10;
+
         /// <summary>
         /// Действие кормления
         /// </summary>
@@ -49,13 +51,14 @@ namespace TamagotchiApp
         public void Play()
         {
             PetFatigue++;
+            PetHappiness--;
             if (PetFatigue <= 10) return;
             PetHealth--;
             PetHunger--;
         }
 
         /// <summary>
-        /// Действие Сна
+        /// Действие сна
         /// </summary>
         public void Sleep()
         {
