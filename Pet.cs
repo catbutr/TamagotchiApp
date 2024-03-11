@@ -15,7 +15,7 @@ namespace TamagotchiApp
         /// <summary>
         /// Имя питомца
         /// </summary>
-        public required string PetName{ get; set; } = name;
+        public string PetName{ get; set; } = name;
 
         /// <summary>
         /// Здоровье питомца
@@ -65,6 +65,15 @@ namespace TamagotchiApp
             PetFatigue = 0;
             PetHealth++;
             PetHunger--;
+        }
+
+        public void ConsoleOutput()
+        {
+            Console.WriteLine($"Name:{PetName}");
+            Console.WriteLine($"Health:{PetHealth}");
+            Console.WriteLine($"Hunger:{PetHunger}");
+            Console.WriteLine($"Fatigue:{PetFatigue}");
+            Console.WriteLine($"Happiness:{PetHappiness}");
         }
     }
 }
